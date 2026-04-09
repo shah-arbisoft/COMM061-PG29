@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model artefacts — NEVER commit these
+runs/
+checkpoints/
+models_cache/
+*.pt
+*.bin
+*.safetensors
+*.gguf
+wandb/
+
+# Data — loaded from HuggingFace at runtime
+data/
+*.csv.lock
+
+# Scratch notebooks — not part of submission
+notebooks/
+
+# Environment
+.env
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+*.md
+
+# IDE
+.vscode/
+.idea/
