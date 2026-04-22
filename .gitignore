@@ -20,8 +20,7 @@ models_cache/
 wandb/
 
 # Data — loaded from HuggingFace at runtime
-data/
-*.csv.lock
+data/*.csv.lock
 
 # Scratch notebooks — not part of submission
 notebooks/

@@ -1,4 +1,8 @@
+# COMM061 NLP Coursework — PG29
+
 Sequence classification for **Sentiment** and **Sarcasm** detection across three English varieties (en-AU, en-IN, en-UK) using the [BESSTIE](https://huggingface.co/datasets/surrey-nlp/BESSTIE-CW-26) dataset.
+
+University of Surrey — MSc Data Science, Semester 2 (2025–26)
 
 ## Quick Start
 
@@ -33,23 +37,23 @@ COMM061-PG29/
     ├── data/
     │   ├── loader.py           # Dataset loading, filtering, caching
     │   ├── preprocessing.py    # Text cleaning + spaCy tokenisation
-    │   └── analysis.py         # EDA, distributions, vocab overlap
+    │   └── analysis.py         # Q1: EDA, distributions, vocab overlap
     ├── models/
-    │   ├── classical.py        # TF-IDF + LogReg/SVM baselines
-    │   ├── transformer.py      # RoBERTa fine-tuning
-    │   ├── lora_adapter.py     # LoRA adapters per variety
-    │   └── prompting.py        # Error analysis + few-shot prompting
+    │   ├── classical.py        # Q2.1: TF-IDF + LogReg/SVM baselines
+    │   ├── transformer.py      # Q2.1 + Q2.2: RoBERTa fine-tuning
+    │   ├── lora_adapter.py     # Q2.3: LoRA adapters per variety
+    │   └── prompting.py        # Q4: Error analysis + few-shot prompting
     ├── evaluation/
     │   ├── metrics.py          # Shared metric computation + result formatting
     │   └── visualisation.py    # Confusion matrices, heatmaps, comparison charts
     └── deployment/
-        ├── app.py              # Gradio web app
-        └── benchmark.py        # Inference timing
+        ├── app.py              # Q5.1: Gradio web app
+        └── benchmark.py        # Q5.2: Inference timing
 ```
 
 ## How It Works
 
-`main.ipynb` is a thin orchestrator, it imports functions from `src/` and calls them. Each team member works in their own module to avoid merge conflicts.
+`main.ipynb` is a thin orchestrator — it imports functions from `src/` and calls them. Each team member works in their own module to avoid merge conflicts.
 
 All experiment results are saved to `results/` as CSV using a shared `format_result_row()` function, so Q3 evaluation is just reading those files. All figures are saved to `figures/` at 150 DPI.
 
@@ -64,15 +68,6 @@ Loaded from HuggingFace at runtime: [`surrey-nlp/BESSTIE-CW-26`](https://hugging
 | en-UK   | 1,203 | 101 | 700  | 2,004 | 7.6%      |
 
 Do NOT commit the dataset or any model checkpoints.
-
-## Branching Strategy
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Protected | Stable code — PRs only |
-| `m1/data-analysis` | EDA and visualisation |
-| `m2/baselines` | Classical and transformer experiments |
-| `m3/lora` | LoRA adapters and error analysis |
 
 
 ## Key Conventions
