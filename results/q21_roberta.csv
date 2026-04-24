@@ -1,0 +1,17 @@
+experiment,model,task,variety,seed,macro_f1,precision_macro,recall_macro,f1_class_0,f1_class_1,precision_class_0,precision_class_1,recall_class_0,recall_class_1,majority_class_only
+Q2.1,roberta-base,Sentiment,all,42,0.8983,0.8983,0.8985,0.8995,0.8971,0.9102,0.8864,0.889,0.9081,False
+Q2.1,roberta-base,Sentiment,en-AU,42,0.8978,0.8984,0.8974,0.9031,0.8924,0.893,0.9038,0.9135,0.8812,False
+Q2.1,roberta-base,Sentiment,en-IN,42,0.8541,0.8542,0.8553,0.8578,0.8503,0.8821,0.8264,0.8349,0.8756,False
+Q2.1,roberta-base,Sentiment,en-UK,42,0.9499,0.9508,0.9495,0.9477,0.9521,0.9635,0.938,0.9324,0.9667,False
+Q2.1,roberta-base,Sarcasm,all,42,0.7201,0.697,0.7615,0.9051,0.5351,0.9388,0.4552,0.8738,0.6492,False
+Q2.1,roberta-base,Sarcasm,en-AU,42,0.7782,0.7777,0.7786,0.8693,0.687,0.8702,0.6853,0.8684,0.6888,False
+Q2.1,roberta-base,Sarcasm,en-IN,42,0.582,0.569,0.622,0.917,0.2469,0.9493,0.1887,0.8868,0.3571,False
+Q2.1,roberta-base,Sarcasm,en-UK,42,0.6917,0.6541,0.8369,0.9185,0.4649,0.9824,0.3258,0.8624,0.8113,False
+Q2.1,roberta-base,Sentiment,all,123,0.8937,0.8951,0.8945,0.8925,0.8949,0.9251,0.8651,0.8621,0.9268,False
+Q2.1,roberta-base,Sentiment,en-AU,123,0.9055,0.9053,0.9058,0.9083,0.9026,0.9176,0.893,0.8991,0.9125,False
+Q2.1,roberta-base,Sentiment,en-IN,123,0.8444,0.847,0.8469,0.8442,0.8446,0.8935,0.8005,0.8,0.8938,False
+Q2.1,roberta-base,Sentiment,en-UK,123,0.9398,0.9428,0.939,0.936,0.9435,0.9715,0.9141,0.9029,0.975,False
+Q2.1,roberta-base,Sarcasm,all,123,0.6873,0.6787,0.6978,0.9069,0.4677,0.9168,0.4406,0.8972,0.4984,False
+Q2.1,roberta-base,Sarcasm,en-AU,123,0.7123,0.7277,0.7027,0.8451,0.5794,0.8175,0.638,0.8747,0.5306,False
+Q2.1,roberta-base,Sarcasm,en-IN,123,0.5599,0.5531,0.5727,0.9272,0.1926,0.9417,0.1646,0.9132,0.2321,False
+Q2.1,roberta-base,Sarcasm,en-UK,123,0.6898,0.6548,0.7776,0.9309,0.4487,0.9698,0.3398,0.8949,0.6604,False
