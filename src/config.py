@@ -50,10 +50,10 @@ LORA_RANK = 8
 LORA_ALPHA = 16
 LORA_DROPOUT = 0.1
 LORA_TARGET_MODULES = ["q_proj", "v_proj"]
-LLM_MAX_LENGTH = 256
+LLM_MAX_LENGTH = 128
 LLM_EPOCHS = 3
 LLM_LR = 2e-4
-LLM_BATCH_SIZE = 8
+LLM_BATCH_SIZE = 4
 LLM_GRADIENT_ACCUMULATION = 2  # effective batch = 16
 
 # ---------- Evaluation ----------
