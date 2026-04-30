@@ -1,0 +1,10 @@
+model,task,variety,train_variety,macro_f1,precision_class_0,recall_class_0,f1_class_0,precision_class_1,recall_class_1,f1_class_1
+lora-en-AU,Sarcasm,en-AU,en-AU,0.717,0.8486,0.7962,0.8215,0.5731,0.6582,0.6126
+lora-en-AU,Sarcasm,en-IN,en-AU,0.512,0.9664,0.6802,0.7983,0.1355,0.6786,0.2257
+lora-en-AU,Sarcasm,en-UK,en-AU,0.5944,0.9847,0.7419,0.8462,0.214,0.8585,0.3425
+lora-en-IN,Sarcasm,en-AU,en-IN,0.4332,0.7091,0.9936,0.8276,0.5416,0.0204,0.0387
+lora-en-IN,Sarcasm,en-IN,en-IN,0.5651,0.9376,0.9882,0.9622,0.5093,0.1072,0.1679
+lora-en-IN,Sarcasm,en-UK,en-IN,0.5149,0.9266,0.9962,0.9602,0.6428,0.0377,0.0697
+lora-en-UK,Sarcasm,en-AU,en-UK,0.4957,0.7204,0.9682,0.8261,0.5588,0.0969,0.1652
+lora-en-UK,Sarcasm,en-IN,en-UK,0.5974,0.9447,0.9447,0.9447,0.25,0.25,0.25
+lora-en-UK,Sarcasm,en-UK,en-UK,0.6396,0.9405,0.9768,0.9583,0.4643,0.2453,0.321
