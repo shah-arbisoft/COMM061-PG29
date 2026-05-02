@@ -1,0 +1,111 @@
+{
+  "adapter": "adapters/en-AU_seed123",
+  "variety": "en-AU",
+  "seed": 123,
+  "total_test_samples": 667,
+  "total_errors": 156,
+  "total_fp": 95,
+  "total_fn": 61,
+  "explained_examples": [
+    {
+      "text": "When I saw that Hungry Jack had a generous rating of stars I nearly choked on my diet lemonade. The burgers were awful and unpalatable. My partner actually spat his out.",
+      "true_label": 1,
+      "true_name": "Sarcastic",
+      "explanation": "The reviewer calls the rating 'generous' but clearly thinks the place is terrible. That word is ironic on purpose. Then 'nearly choked on my diet lemonade' is obviously exaggerated for effect, not meant literally. The rest of the review ('awful', 'spat his out') confirms the opening praise was mocking, not sincere."
+    },
+    {
+      "text": "Tram way back in the 90s, hit a car.\nAfter school and packed.\nI was holding on, my friend was not.\nI saw him yeet, down the aisle as if he were falling off a cliff, taking the whole aisle with him.\nHe maintained eye contact the whole way, wide eyed with an outstretched hand.\nOne of those slow motion moments.\nA++ would experience again.",
+      "true_label": 1,
+      "true_name": "Sarcastic",
+      "explanation": "The whole story is about a tram crash where someone got thrown down the aisle, which is clearly not a good time. But then it ends with 'A++ would experience again' like it's a product review. Nobody actually wants to relive a tram collision. The gap between how bad the event was and the fake positive rating is what makes it sarcastic."
+    },
+    {
+      "text": "That's ridiculous. \nBut because people are too embarrassed/shy to say not thanks, it sells at that price and just encourages all prices to be increased. Don't be afraid to walk away if you don't like the price.",
+      "true_label": 0,
+      "true_name": "Not Sarcastic",
+      "explanation": "This is just someone complaining about prices being too high. Calling something 'ridiculous' sounds strong but they mean it literally. They actually think the price is unreasonable. There is no hidden meaning or double layer here. They even give real advice at the end ('walk away if you don't like the price'), which you would not do if you were being sarcastic about it."
+    },
+    {
+      "text": "30F, same set of men on all dating apps. If I get a match, I have to squeeze them to have that conversation. I'm an introvert but at least I try. Most of them will try to trick you they're in for a long term but just really want to hookup lol it's hopeless. Good guys might just not be swiping me then I guess. I might just get myself a cat okay",
+      "true_label": 0,
+      "true_name": "Not Sarcastic",
+      "explanation": "The 'get myself a cat' part and the 'lol' make this sound funny, but the person is genuinely frustrated with dating apps. They are not saying the opposite of what they mean. They really do think it is hopeless. Being self-deprecating and venting is not the same as sarcasm. The tone is resigned and honest, not mocking."
+    }
+  ],
+  "fewshot_results": [
+    {
+      "index": 3,
+      "text": "Anyone proposing to run as a candidate for election should have to show that they have completed a civics course. This course should be free of charge, taught at accessible times, as adult community education. The course should cover the history of democracy, the Australian system, comparison to other systems in the past and in other nations, the expectations of an elected official, basic ethical philosophy etc, all up around twenty two-hour classes with assignments in between. \nNo intelligent, honest, decent adult should have any difficulty with this type of course, however it would at least put those who are not, on notice.",
+      "true_label": 1,
+      "true_name": "Sarcastic",
+      "adapter_pred": 0,
+      "adapter_pred_name": "Not Sarcastic",
+      "fewshot_pred": 0,
+      "fewshot_pred_name": "Not Sarcastic",
+      "improved": false,
+      "llm_response": "**Not Sarcastic**\n\nExplanation: While the text presents a detailed proposal for a civics course, it does so in a serious and constructive manner. The author is advocating for such a course without using irony or sarcasm. Instead, it seems like a genuine effort to improve civic education."
+    },
+    {
+      "index": 35,
+      "text": "I'm Not a Junkie, But Who Has The Best Gear? Can't Bring Any With Me. Help!",
+      "true_label": 0,
+      "true_name": "Not Sarcastic",
+      "adapter_pred": 1,
+      "adapter_pred_name": "Sarcastic",
+      "fewshot_pred": 0,
+      "fewshot_pred_name": "Not Sarcastic",
+      "improved": true,
+      "llm_response": "**Not Sarcastic**\nExplanation: The phrase \"I'm Not a Junkie\" suggests honesty rather than mockery. The question \"Who Has The Best Gear?\" implies curiosity rather than sarcasm. The statement \"Can't Bring Any With Me\" indicates genuine concern without any hint of irony or mockery. The final \"Help!\" shows a plea for assistance, indicating sincerity rather than sarcasm."
+    },
+    {
+      "index": 30,
+      "text": "The biggest issue with Perth is not being able to go into a supermarket at 5pm on a Friday night to get supplies.    Made me so glad to have moved from that hell hole 20+ years ago.",
+      "true_label": 1,
+      "true_name": "Sarcastic",
+      "adapter_pred": 0,
+      "adapter_pred_name": "Not Sarcastic",
+      "fewshot_pred": 0,
+      "fewshot_pred_name": "Not Sarcastic",
+      "improved": false,
+      "llm_response": "**Not Sarcastic**\n\nExplanation: While the statement expresses frustration about the lack of availability of goods during peak hours, the overall sentiment is one of relief rather than mockery. The speaker seems genuinely happy to have left Perth due to its shortcomings, indicating a genuine desire to escape the situation."
+    },
+    {
+      "index": 47,
+      "text": "How do you define a \"cold country\"? We are talking San Francisco weather.",
+      "true_label": 1,
+      "true_name": "Sarcastic",
+      "adapter_pred": 0,
+      "adapter_pred_name": "Not Sarcastic",
+      "fewshot_pred": 0,
+      "fewshot_pred_name": "Not Sarcastic",
+      "improved": false,
+      "llm_response": "Not Sarcastic\n\nExplanation: The statement is straightforward and does not contain any irony or hidden meaning. It simply asks for a definition of \"cold country\" using San Francisco weather as an example. There is nothing sarcastically negative or mocking implied in the question."
+    },
+    {
+      "index": 50,
+      "text": "Coming from Cali you must like the warm weather, and have decided on Melbourne. Great choice but bloody freezing in winter. If schools were your priority then I would look in Canterbury, Balwyn, Bulleen, Kew, hawthorn, McKinnon to start off. These areas have great private and public schools and are very nice areas to live in. Melbourne is very diverse so you should love it here. Good luck!",
+      "true_label": 0,
+      "true_name": "Not Sarcastic",
+      "adapter_pred": 1,
+      "adapter_pred_name": "Sarcastic",
+      "fewshot_pred": 0,
+      "fewshot_pred_name": "Not Sarcastic",
+      "improved": true,
+      "llm_response": "Not Sarcastic\n\nExplanation: While the text mentions cold winters in Melbourne compared to California, it does not use irony or exaggeration to convey a negative sentiment. Instead, it provides practical advice based on personal experiences and preferences. The overall tone is informative rather than mocking or sarcastic."
+    },
+    {
+      "index": 61,
+      "text": "the pbo exists to model and extrapolite policycost and  ideas for all partys,not to mention now likely a year out or so 2  election the opposition should already have key policy platforms focus tested and and idea of costings and economic modelling done.\nif labor had of gotten up as opposition last night and gave that little information they would be getting lambasted as being dysfunctional",
+      "true_label": 0,
+      "true_name": "Not Sarcastic",
+      "adapter_pred": 1,
+      "adapter_pred_name": "Sarcastic",
+      "fewshot_pred": 0,
+      "fewshot_pred_name": "Not Sarcastic",
+      "improved": true,
+      "llm_response": "**Not Sarcastic**\nExplanation: While the statement contains elements of irony (e.g., suggesting Labor could be criticized for lack of preparedness), the overall message is serious and factual. It criticizes the opposition party for lacking clear policy platforms and economic models, implying a lack of preparation rather than using sarcasm to mock their perceived incompetence."
+    }
+  ],
+  "n_improved": 3,
+  "n_total_test": 6
+}
