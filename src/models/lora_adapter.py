@@ -238,6 +238,8 @@ def load_adapter(adapter_path):
     Returns:
         (model, tokenizer) tuple
     """
+    from safetensors.torch import load_file
+
     tokenizer = AutoTokenizer.from_pretrained(adapter_path, trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -249,6 +251,17 @@ def load_adapter(adapter_path):
     base_model.config.pad_token_id = tokenizer.pad_token_id
 
     model = PeftModel.from_pretrained(base_model, adapter_path)
+    model = model.merge_and_unload()
+
+    # Manually load the trained classification head (modules_to_save)
+    safetensors_path = Path(adapter_path) / "adapter_model.safetensors"
+    if safetensors_path.exists():
+        adapter_weights = load_file(str(safetensors_path))
+        score_key = "base_model.model.score.weight"
+        if score_key in adapter_weights:
+            model.score.weight.data = adapter_weights[score_key]
+
+    model = model.float()
     model.eval()
 
     if torch.cuda.is_available():
@@ -352,13 +365,11 @@ def run_lora_experiment(max_samples=None):
                 all_results.append(format_result_row(
                     experiment="Q2.3", model=f"lora-{train_var}",
                     task="Sarcasm", variety=test_var, seed=seed,
-                    metrics=metrics,
-                    extra={"train_variety": train_var}
+                    metrics=metrics, train_variety=train_var,
                 ))
 
-    # Save results
-    df = pd.DataFrame(all_results)
-    df.to_csv(RESULTS_DIR / "q23_lora.csv", index=False)
-    print(f"\nSaved to {RESULTS_DIR / 'q23_lora.csv'}")
+    results_df = pd.DataFrame(all_results)
+    results_df.to_csv(RESULTS_DIR / "q23_lora.csv", index=False)
+    print(f"\n  Saved results to {RESULTS_DIR / 'q23_lora.csv'}")
 
-    return df, adapter_paths
+    return results_df, adapter_paths
