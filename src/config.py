@@ -66,8 +66,20 @@ GRADIO_DESCRIPTION = (
     "The system loads the appropriate LoRA adapter for that dialect."
 )
 # Replace with your actual HuggingFace paths after uploading adapters
+# Use best seed per variety: en-AU=123, en-IN=42, en-UK=42
 HF_ADAPTER_PATHS = {
-    "en-AU": "your-hf-username/besstie-lora-en-AU",
-    "en-IN": "your-hf-username/besstie-lora-en-IN",
-    "en-UK": "your-hf-username/besstie-lora-en-UK",
+    "en-AU": "Shah9212/besstie-lora-en-AU",
+    "en-IN": "Shah9212/besstie-lora-en-IN",
+    "en-UK": "Shah9212/besstie-lora-en-UK",
+}
+HF_ROBERTA_SENTIMENT_PATH = "Shah9212/besstie-roberta-sentiment"
+
+# Best adapter seeds per variety (highest in-variety macro_f1)
+# en-AU: seed 123 (0.731) > seed 42 (0.703)
+# en-IN: seed 42 (0.568) > seed 123 (0.563)
+# en-UK: seed 42 (0.640)
+BEST_ADAPTER_SEEDS = {
+    "en-AU": 123,
+    "en-IN": 42,
+    "en-UK": 42,
 }
