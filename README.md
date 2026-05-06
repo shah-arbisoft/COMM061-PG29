@@ -1,4 +1,4 @@
-# COMM061 NLP Coursework — PG29
+# COMM061 NLP Coursework : PG29
 
 Sequence classification for **Sentiment** and **Sarcasm** detection across three English varieties (en-AU, en-IN, en-UK) using the [BESSTIE](https://huggingface.co/datasets/surrey-nlp/BESSTIE-CW-26) dataset.
 
@@ -67,7 +67,32 @@ Loaded from HuggingFace at runtime: [`surrey-nlp/BESSTIE-CW-26`](https://hugging
 | en-IN   | 1,399 | 117 | 816  | 2,332 | 6.8%      |
 | en-UK   | 1,203 | 101 | 700  | 2,004 | 7.6%      |
 
-Do NOT commit the dataset or any model checkpoints.
+
+## Deployment
+
+### Running the Gradio App
+
+```bash
+python -m src.deployment.app
+```
+
+This launches a local Gradio interface for sarcasm and sentiment detection. Select an English variety (en-AU, en-IN, en-UK) and enter text to analyse. The app loads the appropriate LoRA adapter from HuggingFace automatically.
+
+To generate a public shareable link, open the app from a notebook:
+
+```python
+from src.deployment.app import build_app
+app = build_app()
+app.launch(share=True)
+```
+
+### Running Benchmarks
+
+```bash
+python -m src.deployment.benchmark
+```
+
+Benchmarks SVM, RoBERTa and LoRA inference latency across short, medium and long inputs. Results are saved to `results/q52_benchmarks.csv` and the radar chart to `figures/q52_benchmark_chart.png`.
 
 
 ## Key Conventions
