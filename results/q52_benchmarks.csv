@@ -1,0 +1,10 @@
+model,params,input_size,mean_ms,std_ms,min_ms,max_ms
+SVM (TF-IDF),~0.1M params (sparse),short (~10 words),0.45,0.06,0.41,0.63
+SVM (TF-IDF),~0.1M params (sparse),medium (~40 words),0.51,0.03,0.49,0.59
+SVM (TF-IDF),~0.1M params (sparse),long (~120 words),0.78,0.1,0.69,1.05
+RoBERTa-base,125M params,short (~10 words),20.53,2.68,16.95,28.1
+RoBERTa-base,125M params,medium (~40 words),30.5,20.05,15.63,85.01
+RoBERTa-base,125M params,long (~120 words),24.21,17.25,14.15,79.54
+LoRA (Qwen2.5-1.5B),1.5B params,short (~10 words),859.53,38.47,820.23,959.6
+LoRA (Qwen2.5-1.5B),1.5B params,medium (~40 words),882.23,58.71,827.14,1038.52
+LoRA (Qwen2.5-1.5B),1.5B params,long (~120 words),844.84,14.61,828.94,890.42
