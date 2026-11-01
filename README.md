@@ -4,6 +4,10 @@ Sequence classification for **Sentiment** and **Sarcasm** detection across three
 
 University of Surrey — MSc Data Science, Semester 2 (2025–26)
 
+## Team
+
+Four-person group coursework (group PG29): Shah Hussain, Janani Veerakumar, Syed Shahbaz and [@wallihabib-cpu](https://github.com/wallihabib-cpu). I led deployment: the Gradio demo in `src/deployment/` and the Hugging Face model upload (`upload_to_hf.py`).
+
 ## Quick Start
 
 ```bash

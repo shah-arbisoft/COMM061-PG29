@@ -9,6 +9,9 @@ build/
 # Jupyter
 .ipynb_checkpoints/
 
+# Gradio share-link cache
+.gradio/
+
 # Model artefacts — NEVER commit these
 runs/
 checkpoints/
